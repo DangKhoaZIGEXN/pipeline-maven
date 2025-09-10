@@ -5,6 +5,10 @@ pipeline {
         PASS = credentials('PASS')
     }
 
+    triggers {
+        githubPush()   // ✅ Trigger khi GitHub push code
+    }
+
     stages {
         stage('Build') {
             steps {
